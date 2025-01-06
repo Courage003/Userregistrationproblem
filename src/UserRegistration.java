@@ -15,7 +15,11 @@ public class UserRegistration
     public boolean validateEmail(String email) {
         String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         return Pattern.matches(regex, email);
-    }
+    }public boolean validateMobileNumber(String mobileNumber) {
+    String regex = "^[0-9]{2} [0-9]{10}$";
+    return Pattern.matches(regex, mobileNumber);
+}
+
     public static void main(String[] args){
         UserRegistration userRegistration = new UserRegistration();
         System.out.println(userRegistration.validateFirstName("Dhruv"));
