@@ -12,7 +12,10 @@ public class UserRegistration
         String regex= "^[A-Z][a-zA-Z]{2,}$";
         return Pattern.matches(regex, lastName);
     }
-
+    public boolean validateEmail(String email) {
+        String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+        return Pattern.matches(regex, email);
+    }
     public static void main(String[] args){
         UserRegistration userRegistration = new UserRegistration();
         System.out.println(userRegistration.validateFirstName("Dhruv"));
